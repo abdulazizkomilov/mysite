@@ -99,8 +99,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'verceldb',
         'USER': 'default',
-        'PASSWORD': 's2ukOdejWS8E',
-        'HOST': 'ep-bold-queen-40398408-pooler.us-east-1.postgres.vercel-storage.com',
+        'PASSWORD': 'cmYj0rp9faIz',
+        'HOST': 'ep-spring-feather-a4v2zvba-pooler.us-east-1.postgres.vercel-storage.com',
         'PORT': '5432',
     }
 }
