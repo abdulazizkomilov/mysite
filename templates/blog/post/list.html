@@ -1,0 +1,30 @@
+{% extends "blog/base.html" %}
+{% block title %}My Blog{% endblock %}
+{% block content %}
+
+<div class="row mb-2">
+    {% for post in posts %}
+    <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">NEW</strong>
+                {% if post.img %}
+                <div>
+                    <img src="{{ post.img.url }}" class="rounded-3" width="240" height="164" alt="{{ post.title }}">
+                </div>
+                {% endif %}
+                <h5 class="mb-0">{{ post.title|truncatewords:8 }}</h5>
+                <div class="mb-1 text-muted">{{ post.publish }}</div>
+                <p class="card-text mb-auto">
+                    {{ post.body|truncatewords:20 }}
+                </p>
+                <a href="{{ post.get_absolute_url }}" class="stretched-link">Continue reading</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% include 'blog/paginiton.html' with page=page_obj %}
+
+{% endblock %}

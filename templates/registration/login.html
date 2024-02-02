@@ -1,0 +1,42 @@
+{% extends "blog/base.html" %}
+{% block title %}Sign In{% endblock %}
+{% block content %}
+
+<main class="form-signin">
+    <div class="container py-5 px-5">
+        <div class="row g-5">
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Kirish</h4>
+                <form class="needs-validation" novalidate="" method="post">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="username" class="form-label">Username</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text">@</span>
+                                {% csrf_token %}
+                                {{ form.username }}
+                                <div class="invalid-feedback">
+                                    Usernameni kiriting
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="email" class="form-label">Parol</label>
+                            {% csrf_token %}
+                            {{ form.password }}
+                            <div class="invalid-feedback">
+                                Parolni kiriting
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="w-100 btn btn-primary btn-lg mt-5" type="submit">Jo'natish</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}
