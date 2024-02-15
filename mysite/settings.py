@@ -14,25 +14,7 @@ SECRET_KEY = "django-insecure-27bio$0#f6_#g+zm^h7jc7%gh@al4j*w*!-^#n=qol5*r(3yny
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '*',
-]
-
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://mysite-lime.vercel.app",
-    "http://mysite-lime.vercel.app",
-]
-SESSION_COOKIE_DOMAIN = "http://mysite-lime.vercel.app"
-
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_BROWSER_XSS_FILTER = True
-
-SECURE_HSTS_SECONDS = 3600
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -86,22 +68,10 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
-
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'verceldb',
-        'USER': 'default',
-        'PASSWORD': 'cmYj0rp9faIz',
-        'HOST': 'ep-spring-feather-a4v2zvba-pooler.us-east-1.postgres.vercel-storage.com',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
