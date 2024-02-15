@@ -57,8 +57,8 @@ ROOT_URLCONF = "mysite.urls"
 
 
 CSRF_TRUSTED_ORIGINS = [
-    f"https:{WEBSITE_URL}",
-    f"http:{WEBSITE_URL}",
+    f"https://{WEBSITE_URL}",
+    f"http://{WEBSITE_URL}",
 ]
 CSRF_COOKIE_DOMAIN = WEBSITE_URL
 CSRF_COOKIE_SECURE = True
